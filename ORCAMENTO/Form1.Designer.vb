@@ -41,7 +41,7 @@ Partial Class Form1
         Me.txtVlrServicos = New System.Windows.Forms.TextBox()
         Me.txtDesconto = New System.Windows.Forms.TextBox()
         Me.txtTotal = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnImprimir = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblNomeEmpresa
@@ -215,17 +215,17 @@ Partial Class Form1
         Me.txtTotal.Size = New System.Drawing.Size(100, 20)
         Me.txtTotal.TabIndex = 18
         '
-        'Button1
+        'btnImprimir
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = Global.ORCAMENTO.My.Resources.Resources.BotaoImprimir
-        Me.Button1.Location = New System.Drawing.Point(272, 512)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(161, 171)
-        Me.Button1.TabIndex = 19
-        Me.Button1.Text = "Imprimir"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImprimir.Image = Global.ORCAMENTO.My.Resources.Resources.BotaoImprimir
+        Me.btnImprimir.Location = New System.Drawing.Point(272, 512)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(161, 171)
+        Me.btnImprimir.TabIndex = 19
+        Me.btnImprimir.Text = "Imprimir"
+        Me.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnImprimir.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -233,7 +233,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(494, 695)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.txtDesconto)
         Me.Controls.Add(Me.txtVlrServicos)
@@ -279,5 +279,5 @@ Partial Class Form1
     Friend WithEvents txtVlrServicos As TextBox
     Friend WithEvents txtDesconto As TextBox
     Friend WithEvents txtTotal As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnImprimir As Button
 End Class
