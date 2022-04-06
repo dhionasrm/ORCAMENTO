@@ -42,6 +42,7 @@ Partial Class Form1
         Me.txtDesconto = New System.Windows.Forms.TextBox()
         Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.btnImprimir = New System.Windows.Forms.Button()
+        Me.txtArquivoPDF = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'lblNomeEmpresa
@@ -227,12 +228,21 @@ Partial Class Form1
         Me.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnImprimir.UseVisualStyleBackColor = True
         '
+        'txtArquivoPDF
+        '
+        Me.txtArquivoPDF.Location = New System.Drawing.Point(27, 662)
+        Me.txtArquivoPDF.Name = "txtArquivoPDF"
+        Me.txtArquivoPDF.Size = New System.Drawing.Size(198, 20)
+        Me.txtArquivoPDF.TabIndex = 20
+        Me.txtArquivoPDF.Text = "C:\Users\dhionas.magalhaes\Downloads"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(494, 695)
+        Me.Controls.Add(Me.txtArquivoPDF)
         Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.txtDesconto)
@@ -280,4 +290,5 @@ Partial Class Form1
     Friend WithEvents txtDesconto As TextBox
     Friend WithEvents txtTotal As TextBox
     Friend WithEvents btnImprimir As Button
+    Friend WithEvents txtArquivoPDF As TextBox
 End Class
