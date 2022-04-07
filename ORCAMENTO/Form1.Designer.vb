@@ -234,7 +234,7 @@ Partial Class Form1
         Me.txtArquivoPDF.Name = "txtArquivoPDF"
         Me.txtArquivoPDF.Size = New System.Drawing.Size(198, 20)
         Me.txtArquivoPDF.TabIndex = 20
-        Me.txtArquivoPDF.Text = "C:\Users\dhionas.magalhaes\Downloads"
+        Me.txtArquivoPDF.Text = "C:\Users\DHIONAS\source\repos\dhionasrm\ORCAMENTO\ORCAMENTO\Files"
         '
         'Form1
         '

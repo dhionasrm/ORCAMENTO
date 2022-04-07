@@ -9,7 +9,7 @@ Public Class Form1
         Dim doc As New Document(iTextSharp.text.PageSize.A4, 20, 20, 20, 20)
         'Definido Stream
         Dim arquivo As FileStream = New FileStream(txtArquivoPDF.Text, FileMode.Create)
-        'Definindo um objeto pdfwriter
+        'definir um objeto pdfwriter
         Dim writer As PdfWriter = PdfWriter.GetInstance(doc, arquivo)
         doc.Open()
 
@@ -21,7 +21,7 @@ Public Class Form1
         doc.AddTitle("Orçamento Martelinho de Ouro.")
 
         'Definindo imagem
-        Dim arquivoImagem As String = "C:\Users\dhionas.magalhaes\source\Workspaces\ORCAMENTO\ORCAMENTO\Imagens\LOGO.png"
+        Dim arquivoImagem As String = "C:\Users\DHIONAS\source\repos\dhionasrm\ORCAMENTO\ORCAMENTO\Imagens\LOGO.png"
         Dim png As iTextSharp.text.Image = iTextSharp.text.Image.GetInstance(New Uri(arquivoImagem))
         png.Alignment = Element.ALIGN_CENTER
         doc.Add(png)
@@ -45,12 +45,52 @@ Public Class Form1
         para4.Alignment = Element.ALIGN_LEFT
         doc.Add(para4)
 
-        doc.Add(New Paragraph(" "))
-
-        Dim para5 As New Paragraph(lblOrcamento.Text, fonte1)
-        para5.Alignment = Element.ALIGN_CENTER
+        Dim para5 As New Paragraph(Now.Day.ToString() & " / " & Now.Month.ToString() & " / " & Now.Year.ToString())
+        para5.Alignment = Element.ALIGN_LEFT
         doc.Add(para5)
 
+        doc.Add(New Paragraph(" "))
+
+        Dim para6 As New Paragraph(lblOrcamento.Text, fonte1)
+        para6.Alignment = Element.ALIGN_CENTER
+        doc.Add(para6)
+
+        doc.Add(New Paragraph(" "))
+
+        Dim para7 As New Paragraph(lblCliente.Text & " " & txtCliente.Text, fonte1)
+        para7.Alignment = Element.ALIGN_LEFT
+        doc.Add(para7)
+
+        Dim para8 As New Paragraph(lblFoneCliente.Text & " " & txtFoneCliente.Text, fonte1)
+        para8.Alignment = Element.ALIGN_LEFT
+        doc.Add(para8)
+
+        Dim para9 As New Paragraph(lblServicos.Text, fonte1)
+        para9.Alignment = Element.ALIGN_LEFT
+        doc.Add(para9)
+
+        Dim para10 As New Paragraph(txtServicos.Text, fonte1)
+        para10.Alignment = Element.ALIGN_LEFT
+        doc.Add(para10)
+
+        Dim para11 As New Paragraph(lblPecas.Text & " " & txtPecas.Text, fonte1)
+        para11.Alignment = Element.ALIGN_LEFT
+        doc.Add(para11)
+
+        Dim para12 As New Paragraph(lblServicos.Text & " " & txtServicos.Text, fonte1)
+        para12.Alignment = Element.ALIGN_LEFT
+        doc.Add(para12)
+
+        Dim para13 As New Paragraph(lblDesconto.Text & " " & txtDesconto.Text, fonte1)
+        para13.Alignment = Element.ALIGN_LEFT
+        doc.Add(para13)
+
+        Dim para14 As New Paragraph(lblTotal.Text & " " & txtTotal.Text, fonte1)
+        para14.Alignment = Element.ALIGN_LEFT
+        doc.Add(para14)
+
+        doc.Close()
+        arquivo.Close()
 
     End Sub
 End Class
