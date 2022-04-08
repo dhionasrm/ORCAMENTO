@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblNomeEmpresa = New System.Windows.Forms.Label()
         Me.lblCnpjEmpresa = New System.Windows.Forms.Label()
@@ -220,7 +220,7 @@ Partial Class Form1
         '
         Me.btnImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnImprimir.Image = Global.ORCAMENTO.My.Resources.Resources.BotaoImprimir
-        Me.btnImprimir.Location = New System.Drawing.Point(272, 512)
+        Me.btnImprimir.Location = New System.Drawing.Point(311, 511)
         Me.btnImprimir.Name = "btnImprimir"
         Me.btnImprimir.Size = New System.Drawing.Size(161, 171)
         Me.btnImprimir.TabIndex = 19
@@ -234,7 +234,7 @@ Partial Class Form1
         Me.txtArquivoPDF.Name = "txtArquivoPDF"
         Me.txtArquivoPDF.Size = New System.Drawing.Size(198, 20)
         Me.txtArquivoPDF.TabIndex = 20
-        Me.txtArquivoPDF.Text = "C:\Users\DHIONAS\source\repos\dhionasrm\ORCAMENTO\ORCAMENTO\Files"
+        Me.txtArquivoPDF.Text = "C:\Users\DHIONAS\Downloads\Arquivo.pdf"
         '
         'Form1
         '

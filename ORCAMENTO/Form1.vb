@@ -2,9 +2,11 @@
 Imports iTextSharp.text
 Imports iTextSharp.text.pdf
 Imports System.IO
+Imports System.Windows.Forms
 
 Public Class Form1
     Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+
         'Criando uma instância do documento
         Dim doc As New Document(iTextSharp.text.PageSize.A4, 20, 20, 20, 20)
         'Definido Stream
@@ -26,7 +28,11 @@ Public Class Form1
         png.Alignment = Element.ALIGN_CENTER
         doc.Add(png)
 
+        doc.Add(New Paragraph(" "))
+        doc.Add(New Paragraph(" "))
+
         Dim fonte1 As New iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 16, Font.Bold, BaseColor.BLACK)
+        Dim fonte2 As New iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 18, Font.Bold, BaseColor.RED)
 
         'Criando parágrafos
         Dim para1 As New Paragraph(lblNomeEmpresa.Text, fonte1)
@@ -77,7 +83,7 @@ Public Class Form1
         para11.Alignment = Element.ALIGN_LEFT
         doc.Add(para11)
 
-        Dim para12 As New Paragraph(lblServicos.Text & " " & txtServicos.Text, fonte1)
+        Dim para12 As New Paragraph(lblVlrServicos.Text & " " & txtVlrServicos.Text, fonte1)
         para12.Alignment = Element.ALIGN_LEFT
         doc.Add(para12)
 
@@ -89,8 +95,15 @@ Public Class Form1
         para14.Alignment = Element.ALIGN_LEFT
         doc.Add(para14)
 
+        doc.Add(New Paragraph(" "))
+
+        Dim para15 As New Paragraph("Parcelamento no cartão de crédito em 3 X sem juros.", fonte2)
+        para15.Alignment = Element.ALIGN_CENTER
+        doc.Add(para15)
+
         doc.Close()
         arquivo.Close()
 
     End Sub
+
 End Class
