@@ -129,13 +129,6 @@ Public Class Form1
         para15.Alignment = Element.ALIGN_CENTER
         doc.Add(para15)
 
-        'If txtCliente.TextLength > 0 And txtFoneCliente.TextLength > 0 And txtPlaca.TextLength > 0 And txtCor.TextLength > 0 And txtModelo.TextLength > 0 And txtServicos.TextLength > 0 Then
-        'btnImprimir.Enabled = True
-        'Else
-        'btnImprimir.Enabled = False
-        'End If
-
-
         doc.Close()
         arquivo.Close()
 
