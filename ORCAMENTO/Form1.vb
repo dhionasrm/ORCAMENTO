@@ -34,6 +34,23 @@ Public Class Form1
         Dim fonte1 As New iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 16, Font.Bold, BaseColor.BLACK)
         Dim fonte2 As New iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.TIMES_ROMAN, 18, Font.Bold, BaseColor.RED)
 
+        'Validando campos do formulário
+        If txtCliente.Text.Trim() = String.Empty Then
+            MsgBox("Campo cliente não preenchido")
+        ElseIf txtFoneCliente.Text.Trim() = String.Empty Then
+            MsgBox("Campo telefone não preenchido")
+        ElseIf txtPlaca.Text.Trim() = String.Empty Then
+            MsgBox("Campo placa preenchido")
+        ElseIf txtCor.Text.Trim() = String.Empty Then
+            MsgBox("Campo cor não preenchido")
+        ElseIf txtModelo.Text.Trim() = String.Empty Then
+            MsgBox("Campo modelo não preenchido")
+        ElseIf txtServicos.Text.Trim() = String.Empty Then
+            MsgBox("Campo serviços não preenchido")
+        ElseIf txtServicos.Text.Trim() = String.Empty Then
+            MsgBox("Campo serviços não preenchido")
+        End If
+
         'Criando parágrafos
         Dim para1 As New Paragraph(lblNomeEmpresa.Text, fonte1)
         para1.Alignment = Element.ALIGN_LEFT
@@ -56,11 +73,13 @@ Public Class Form1
         doc.Add(para5)
 
         doc.Add(New Paragraph(" "))
+        doc.Add(New Paragraph(" "))
 
         Dim para6 As New Paragraph(lblOrcamento.Text, fonte1)
         para6.Alignment = Element.ALIGN_CENTER
         doc.Add(para6)
 
+        doc.Add(New Paragraph(" "))
         doc.Add(New Paragraph(" "))
 
         Dim para7 As New Paragraph(lblCliente.Text & " " & txtCliente.Text, fonte1)
@@ -104,14 +123,25 @@ Public Class Form1
         doc.Add(para14)
 
         doc.Add(New Paragraph(" "))
+        doc.Add(New Paragraph(" "))
 
         Dim para15 As New Paragraph("Parcelamento no cartão de crédito em 3 X sem juros.", fonte2)
         para15.Alignment = Element.ALIGN_CENTER
         doc.Add(para15)
+
+        'If txtCliente.TextLength > 0 And txtFoneCliente.TextLength > 0 And txtPlaca.TextLength > 0 And txtCor.TextLength > 0 And txtModelo.TextLength > 0 And txtServicos.TextLength > 0 Then
+        'btnImprimir.Enabled = True
+        'Else
+        'btnImprimir.Enabled = False
+        'End If
+
 
         doc.Close()
         arquivo.Close()
 
     End Sub
 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
