@@ -43,6 +43,12 @@ Partial Class Form1
         Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.btnImprimir = New System.Windows.Forms.Button()
         Me.txtArquivoPDF = New System.Windows.Forms.TextBox()
+        Me.lblPlaca = New System.Windows.Forms.Label()
+        Me.lblModelo = New System.Windows.Forms.Label()
+        Me.txtPlaca = New System.Windows.Forms.TextBox()
+        Me.txtModelo = New System.Windows.Forms.TextBox()
+        Me.lblCor = New System.Windows.Forms.Label()
+        Me.txtCor = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'lblNomeEmpresa
@@ -100,7 +106,7 @@ Partial Class Form1
         '
         Me.lblCliente.AutoSize = True
         Me.lblCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCliente.Location = New System.Drawing.Point(23, 167)
+        Me.lblCliente.Location = New System.Drawing.Point(20, 167)
         Me.lblCliente.Name = "lblCliente"
         Me.lblCliente.Size = New System.Drawing.Size(62, 20)
         Me.lblCliente.TabIndex = 5
@@ -110,7 +116,7 @@ Partial Class Form1
         '
         Me.lblFoneCliente.AutoSize = True
         Me.lblFoneCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFoneCliente.Location = New System.Drawing.Point(23, 190)
+        Me.lblFoneCliente.Location = New System.Drawing.Point(20, 192)
         Me.lblFoneCliente.Name = "lblFoneCliente"
         Me.lblFoneCliente.Size = New System.Drawing.Size(75, 20)
         Me.lblFoneCliente.TabIndex = 6
@@ -132,17 +138,17 @@ Partial Class Form1
         '
         'txtServicos
         '
-        Me.txtServicos.Location = New System.Drawing.Point(24, 256)
+        Me.txtServicos.Location = New System.Drawing.Point(24, 317)
         Me.txtServicos.Multiline = True
         Me.txtServicos.Name = "txtServicos"
-        Me.txtServicos.Size = New System.Drawing.Size(448, 250)
+        Me.txtServicos.Size = New System.Drawing.Size(448, 188)
         Me.txtServicos.TabIndex = 9
         '
         'lblServicos
         '
         Me.lblServicos.AutoSize = True
         Me.lblServicos.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblServicos.Location = New System.Drawing.Point(23, 233)
+        Me.lblServicos.Location = New System.Drawing.Point(20, 294)
         Me.lblServicos.Name = "lblServicos"
         Me.lblServicos.Size = New System.Drawing.Size(73, 20)
         Me.lblServicos.TabIndex = 10
@@ -234,7 +240,58 @@ Partial Class Form1
         Me.txtArquivoPDF.Name = "txtArquivoPDF"
         Me.txtArquivoPDF.Size = New System.Drawing.Size(198, 20)
         Me.txtArquivoPDF.TabIndex = 20
-        Me.txtArquivoPDF.Text = "C:\Users\DHIONAS\Downloads\Arquivo.pdf"
+        Me.txtArquivoPDF.Text = "C:\Users\dhionas.magalhaes\Downloads\Arquivo.pdf"
+        '
+        'lblPlaca
+        '
+        Me.lblPlaca.AutoSize = True
+        Me.lblPlaca.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.lblPlaca.Location = New System.Drawing.Point(20, 217)
+        Me.lblPlaca.Name = "lblPlaca"
+        Me.lblPlaca.Size = New System.Drawing.Size(52, 20)
+        Me.lblPlaca.TabIndex = 21
+        Me.lblPlaca.Text = "Placa:"
+        '
+        'lblModelo
+        '
+        Me.lblModelo.AutoSize = True
+        Me.lblModelo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.lblModelo.Location = New System.Drawing.Point(20, 242)
+        Me.lblModelo.Name = "lblModelo"
+        Me.lblModelo.Size = New System.Drawing.Size(65, 20)
+        Me.lblModelo.TabIndex = 22
+        Me.lblModelo.Text = "Modelo:"
+        '
+        'txtPlaca
+        '
+        Me.txtPlaca.Location = New System.Drawing.Point(104, 219)
+        Me.txtPlaca.Name = "txtPlaca"
+        Me.txtPlaca.Size = New System.Drawing.Size(121, 20)
+        Me.txtPlaca.TabIndex = 23
+        '
+        'txtModelo
+        '
+        Me.txtModelo.Location = New System.Drawing.Point(104, 245)
+        Me.txtModelo.Name = "txtModelo"
+        Me.txtModelo.Size = New System.Drawing.Size(368, 20)
+        Me.txtModelo.TabIndex = 24
+        '
+        'lblCor
+        '
+        Me.lblCor.AutoSize = True
+        Me.lblCor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.lblCor.Location = New System.Drawing.Point(251, 219)
+        Me.lblCor.Name = "lblCor"
+        Me.lblCor.Size = New System.Drawing.Size(38, 20)
+        Me.lblCor.TabIndex = 25
+        Me.lblCor.Text = "Cor:"
+        '
+        'txtCor
+        '
+        Me.txtCor.Location = New System.Drawing.Point(295, 219)
+        Me.txtCor.Name = "txtCor"
+        Me.txtCor.Size = New System.Drawing.Size(177, 20)
+        Me.txtCor.TabIndex = 26
         '
         'Form1
         '
@@ -242,6 +299,12 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(494, 695)
+        Me.Controls.Add(Me.txtCor)
+        Me.Controls.Add(Me.lblCor)
+        Me.Controls.Add(Me.txtModelo)
+        Me.Controls.Add(Me.txtPlaca)
+        Me.Controls.Add(Me.lblModelo)
+        Me.Controls.Add(Me.lblPlaca)
         Me.Controls.Add(Me.txtArquivoPDF)
         Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.txtTotal)
@@ -291,4 +354,10 @@ Partial Class Form1
     Friend WithEvents txtTotal As TextBox
     Friend WithEvents btnImprimir As Button
     Friend WithEvents txtArquivoPDF As TextBox
+    Friend WithEvents lblPlaca As Label
+    Friend WithEvents lblModelo As Label
+    Friend WithEvents txtPlaca As TextBox
+    Friend WithEvents txtModelo As TextBox
+    Friend WithEvents lblCor As Label
+    Friend WithEvents txtCor As TextBox
 End Class

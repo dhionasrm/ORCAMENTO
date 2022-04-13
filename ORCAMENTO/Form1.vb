@@ -23,7 +23,7 @@ Public Class Form1
         doc.AddTitle("Orçamento Martelinho de Ouro.")
 
         'Definindo imagem
-        Dim arquivoImagem As String = "C:\Users\DHIONAS\source\repos\dhionasrm\ORCAMENTO\ORCAMENTO\Imagens\LOGO.png"
+        Dim arquivoImagem As String = "C:\Users\dhionas.magalhaes\source\reposPessoal\ORCAMENTO\ORCAMENTO\Imagens\LOGO.png"
         Dim png As iTextSharp.text.Image = iTextSharp.text.Image.GetInstance(New Uri(arquivoImagem))
         png.Alignment = Element.ALIGN_CENTER
         doc.Add(png)
@@ -70,6 +70,14 @@ Public Class Form1
         Dim para8 As New Paragraph(lblFoneCliente.Text & " " & txtFoneCliente.Text, fonte1)
         para8.Alignment = Element.ALIGN_LEFT
         doc.Add(para8)
+
+        Dim para16 As New Paragraph(lblPlaca.Text & " " & txtPlaca.Text & "  " & lblCor.Text & " " & txtCor.Text, fonte1)
+        para16.Alignment = Element.ALIGN_LEFT
+        doc.Add(para16)
+
+        Dim para17 As New Paragraph(lblModelo.Text & " " & txtModelo.Text, fonte1)
+        para17.Alignment = Element.ALIGN_LEFT
+        doc.Add(para17)
 
         Dim para9 As New Paragraph(lblServicos.Text, fonte1)
         para9.Alignment = Element.ALIGN_LEFT
